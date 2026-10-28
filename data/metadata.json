@@ -1,0 +1,43 @@
+{
+  "synthetic_only": true,
+  "seed": 20261028,
+  "order_window": [
+    "2025-01-01",
+    "2025-12-31"
+  ],
+  "snapshot_exclusive": "2026-01-01",
+  "money_unit": "CNY cents, integer",
+  "rows": {
+    "customers": 1200,
+    "products": 24,
+    "sessions": 22000,
+    "orders": 3815,
+    "order_items": 5906,
+    "marketing": 1460,
+    "inventory": 8760,
+    "experiment": 8000,
+    "reviews": 800,
+    "orders_dirty": 3830
+  },
+  "assumptions": [
+    "All customers register within the observation year; no prior transaction history is omitted.",
+    "At most one order per session; visits are sessions, not distinct people.",
+    "Teaching management report on payment/order-day basis, not statutory revenue recognition.",
+    "Refunds are observed only before snapshot; returned goods fully resalable at original cost.",
+    "Inventory shipments are simplified to paid-order day; replenishment is unconstrained.",
+    "3% platform fee on net merchandise sales; refundable; 800-cent fulfilment charge per paid order remains after return.",
+    "Merchandise revenue excludes shipping, tax and overhead; contribution excludes marketing until explicitly subtracted.",
+    "Marketing is session-entry attribution, not causal incremental return.",
+    "Reviews are fictional rule-based examples; experiment is independent user-level synthetic randomisation."
+  ],
+  "experiment_generation_probabilities": {
+    "A": 0.1,
+    "B": 0.112
+  },
+  "dirty_orders": {
+    "duplicate_order_ids_added": 15,
+    "bad_date_rows": 6,
+    "bad_amount_rows": 6,
+    "missing_channel_rows": 10
+  }
+}
